@@ -57,7 +57,7 @@ body {
 
 .hero-inner {
   max-width: 1100px;
-  padding-top: 200px; /* controls how low the text sits */
+  padding-top: 200px;
 }
 
 .hero h1 {
@@ -73,6 +73,83 @@ body {
   font-size: clamp(20px, 2.2vw, 34px);
   line-height: 1.6;
   color: var(--muted);
+}
+
+/* Projects */
+.projects {
+  padding: 140px 64px 120px;
+}
+
+.projects-inner {
+  max-width: 1100px;
+}
+
+.projects h2 {
+  font-size: clamp(34px, 4vw, 64px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.projects-sub {
+  margin-top: 14px;
+  max-width: 920px;
+  font-size: clamp(18px, 1.8vw, 26px);
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.project-grid {
+  margin-top: 44px;
+  max-width: 520px;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 22px 22px 24px;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.14);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  line-height: 1.2;
+}
+
+.project-card p {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.pill {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 6px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 /* Responsive */
@@ -96,5 +173,13 @@ body {
 
   .logo {
     font-size: 36px;
+  }
+
+  .projects {
+    padding: 90px 22px 90px;
+  }
+
+  .project-card p {
+    font-size: 15px;
   }
 }
