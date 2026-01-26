@@ -212,3 +212,157 @@ body {
   margin-top: 44px;
   max-width: 520px;
 }
+
+/* Shared page layout */
+.page {
+  padding: 140px 64px 120px;
+}
+
+.page-inner {
+  max-width: 1100px;
+}
+
+.page h1 {
+  font-size: clamp(56px, 7vw, 96px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.05;
+}
+
+.lede {
+  margin-top: 18px;
+  max-width: 920px;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.content {
+  margin-top: 44px;
+  max-width: 920px;
+}
+
+.content h2 {
+  margin-top: 34px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.content p,
+.content li {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.content ul {
+  margin-top: 12px;
+  padding-left: 18px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Resume blocks */
+.item {
+  margin-top: 18px;
+  padding: 18px 18px 16px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+}
+
+.item-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.item h3 {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: var(--text);
+}
+
+.item ul {
+  margin-top: 10px;
+}
+
+/* Skills columns */
+.cols {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+}
+
+.cols li {
+  margin-top: 0;
+}
+
+/* Contact cards */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.contact-card {
+  text-decoration: none;
+  color: var(--text);
+  padding: 18px 18px 16px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.14);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.contact-value {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+/* Small helper block */
+.callout {
+  margin-top: 26px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px dashed rgba(0, 0, 0, 0.14);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page {
+    padding: 90px 22px 90px;
+  }
+
+  .item-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cols {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
